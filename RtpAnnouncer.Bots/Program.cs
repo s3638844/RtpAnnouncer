@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace RtpAnnouncer
+namespace RtpAnnouncer.Bots
 {
     class Program
     {

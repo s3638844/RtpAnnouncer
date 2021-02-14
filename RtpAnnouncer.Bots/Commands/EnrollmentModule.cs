@@ -7,7 +7,7 @@ using DSharpPlus.Entities;
 using DSharpPlus.Net;
 using DSharpPlus.Interactivity.Extensions;
 
-namespace RtpAnnouncer.Commands
+namespace RtpAnnouncer.Bots.Commands
 
 {
     public class EnrollmentModule : BaseCommandModule

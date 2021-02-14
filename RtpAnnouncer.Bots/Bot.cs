@@ -12,9 +12,9 @@ using DSharpPlus.Interactivity;
 using DSharpPlus.Interactivity.Extensions;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
-using RtpAnnouncer.Commands;
+using RtpAnnouncer.Bots.Commands;
 
-namespace RtpAnnouncer
+namespace RtpAnnouncer.Bots
 {
     public class Bot
     {

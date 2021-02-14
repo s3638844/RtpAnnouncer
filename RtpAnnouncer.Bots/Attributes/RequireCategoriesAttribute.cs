@@ -5,9 +5,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Attributes;
-using RtpAnnouncer.Commands;
+using RtpAnnouncer.Bots.Commands;
 
-namespace RtpAnnouncer.Attributes
+namespace RtpAnnouncer.Bots.Attributes
 {
     
     // only usable on methods and classes and not usable multiple times on a function

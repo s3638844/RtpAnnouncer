@@ -6,7 +6,7 @@ using DSharpPlus.CommandsNext.Attributes;
 using DSharpPlus.Entities;
 using DSharpPlus.Interactivity.Extensions;
 
-namespace RtpAnnouncer.Commands
+namespace RtpAnnouncer.Bots.Commands
 {
     public class ChannelModule : BaseCommandModule
     {

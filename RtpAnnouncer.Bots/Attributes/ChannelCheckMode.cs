@@ -1,4 +1,4 @@
-namespace RtpAnnouncer.Attributes
+namespace RtpAnnouncer.Bots.Attributes
 {
     public enum ChannelCheckMode
     {

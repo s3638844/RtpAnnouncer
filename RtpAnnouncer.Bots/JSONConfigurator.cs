@@ -1,6 +1,6 @@
 using Newtonsoft.Json;
 
-namespace RtpAnnouncer
+namespace RtpAnnouncer.Bots
 {
     public struct JSONConfigurator
     {
