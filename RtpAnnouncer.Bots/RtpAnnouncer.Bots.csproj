@@ -1,14 +1,24 @@
-<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk.Web">
 
     <PropertyGroup>
         <OutputType>Exe</OutputType>
         <TargetFramework>netcoreapp3.1</TargetFramework>
+        <RootNamespace>RtpAnnouncer.Bots</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
       <PackageReference Include="DSharpPlus" Version="4.0.0-rc2" />
       <PackageReference Include="DSharpPlus.CommandsNext" Version="4.0.0-rc2" />
       <PackageReference Include="DSharpPlus.Interactivity" Version="4.0.0-rc2" />
+      <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.2.7" />
+      <PackageReference Include="Microsoft.Azure.Cosmos" Version="3.16.0" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.3" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Cosmos" Version="5.0.3" />
+      <PackageReference Include="Microsoft.Extensions.Hosting" Version="5.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\RtpAnnouncer.DAL\RtpAnnouncer.DAL.csproj" />
     </ItemGroup>
 
 </Project>

@@ -5,31 +5,25 @@ using System.Linq;
 using System.Threading.Tasks;
 using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Attributes;
-using RtpAnnouncer.Bots.Commands;
 
 namespace RtpAnnouncer.Bots.Attributes
 {
-    
     // only usable on methods and classes and not usable multiple times on a function
-    [AttributeUsage(AttributeTargets.Method | AttributeTargets.Class, AllowMultiple = false)]
+    [AttributeUsage(AttributeTargets.Method | AttributeTargets.Class)]
     public class RequireCategoriesAttribute : CheckBaseAttribute
     {
-
-        public IReadOnlyList<string> CategoryNames { get; }
-        public ChannelCheckMode CheckMode { get;  }
-        
         public RequireCategoriesAttribute(ChannelCheckMode checkMode, params string[] channelNames)
         {
             CheckMode = checkMode;
             CategoryNames = new ReadOnlyCollection<string>(channelNames);
         }
-        
+
+        public IReadOnlyList<string> CategoryNames { get; }
+        public ChannelCheckMode CheckMode { get; }
+
         public override Task<bool> ExecuteCheckAsync(CommandContext ctx, bool help)
         {
-            if (ctx.Guild == null || ctx.Member == null)
-            {
-                return Task.FromResult(false);
-            }
+            if (ctx.Guild == null || ctx.Member == null) return Task.FromResult(false);
 
             var contains = CategoryNames.Contains(ctx.Channel.Parent.Name, StringComparer.OrdinalIgnoreCase);
 
@@ -38,9 +32,8 @@ namespace RtpAnnouncer.Bots.Attributes
                 // if category name is within collection of allowed names true, else false.  If nothing then also false
                 ChannelCheckMode.Any => Task.FromResult(contains),
                 ChannelCheckMode.None => Task.FromResult(!contains),
-                _ => Task.FromResult(false),
+                _ => Task.FromResult(false)
             };
-
         }
     }
 }
