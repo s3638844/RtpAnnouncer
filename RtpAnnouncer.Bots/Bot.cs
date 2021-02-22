@@ -158,7 +158,8 @@ namespace RtpAnnouncer.Bots
 
                 await s.SendMessageAsync(AlertsChannel, st).ConfigureAwait(false);
             }
-            else if (role == MonitorRole)
+            else if (role == MonitorRole &&
+                     a.User.Presence.Activity.Name.Length > 1)
             {
                 activityHistory[userId] = a.User.Presence.Activity.Name.ToLower();
             }
